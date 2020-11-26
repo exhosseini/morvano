@@ -30,14 +30,14 @@ router.route('/login')
         })
         if (findUser) {
 
-            findUser.verify_token = 1
-            // findUser.verify_token = randomInteger(11111,55555)
+            // findUser.verify_token = 1
+            findUser.verify_token = randomInteger(11111,55555)
             await findUser.save()
-            // await api.VerifyLookup({
-            //     receptor: findUser.phone_number,
-            //     token: findUser.verify_token,
-            //     template: "verify"
-            // });
+            await api.VerifyLookup({
+                receptor: findUser.phone_number,
+                token: findUser.verify_token,
+                template: "verify"
+            });
 
             res.render('auth/showLoginVerify', {phone_number:findUser.phone_number})
         } else {
