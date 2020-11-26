@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    direction: rtl;
+    font-family: Vazir;
+}
+
+html , body {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+}
+
+.main-sidebar {
+    background-color: #59886b;
+    width: 350px;
+    padding: 50px;
+}
+
+.main-sidebar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-sidebar p {
+    margin: 10px;
+}
+
+.main-sidebar li {
+    padding: 10px;
+}
+
+.main-content {
+    padding: 50px;
+}

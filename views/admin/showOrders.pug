@@ -1,0 +1,18 @@
+extends layout
+block content
+    h1 مدیریت سفارشات
+    br
+    table.table
+        thead
+            tr
+                th(scope='col') لینک
+                th(scope='col') توضیحات
+                th(scope='col') وضعیت
+        tbody
+            each order in orders
+                tr
+                    td=order.link_address
+                    td=order.description
+                    td @mdo
+
+

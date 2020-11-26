@@ -1,0 +1,7 @@
+extends layout
+block content
+    form(method='POST',action='/auth/login')
+        .form-group
+            label شماره همراه :
+            input.form-control(type='text',name='phone_number')
+        input.btn.btn-success.btn-block(type='Submit',value='ورود')

@@ -1,0 +1,10 @@
+extends layout
+block content
+    if message
+        h1= message
+    form(method='POST',action='/auth/register/verify')
+        .form-group
+            label کد تایید :
+            input(type='text',name='phone_number', value=phone_number,hidden)
+            input.form-control(type='text',name='verify_token')
+        input.btn.btn-success.btn-block(type='Submit',value='ثبت نام')

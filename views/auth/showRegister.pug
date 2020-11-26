@@ -1,0 +1,13 @@
+extends layout
+block content
+    form(method='POST',action='/auth/register')
+        .form-group
+            label نام :
+            input.form-control(type='text',name='first_name')
+        .form-group
+            label نام خانوادگی :
+            input.form-control(type='text',name='last_name')
+        .form-group
+            label شماره همراه :
+            input.form-control(type='text',name='phone_number')
+        input.btn.btn-success.btn-block(type='Submit',value='ثبت نام')
