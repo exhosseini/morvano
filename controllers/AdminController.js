@@ -8,7 +8,7 @@ router.get('/', (req,res) => {
 })
 
 router.get('/orders', async (req,res) => {
-    const findOrders = await Order.find({})
+    const findOrders = await Order.find({}).populate('user')
     res.render('admin/showOrders', {orders: findOrders})
 })
 

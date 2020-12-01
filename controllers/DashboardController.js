@@ -19,11 +19,12 @@ router.route('/orders/create')
         res.render('dashboard/showOrdersCreate')
     })
     .post(async (req,res) => {
+        const findUser = await User.findById(req.session.user)
         const newOrder = Order({
             description: req.body.description,
-            link_address: req.body.link_address
+            link_address: req.body.link_address,
+            user: findUser.id
         })
-        const findUser = await User.findById(req.session.user)
         await newOrder.save()
         findUser.orders.push(newOrder)
         await findUser.save()
