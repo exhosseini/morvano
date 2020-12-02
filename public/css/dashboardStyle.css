@@ -10,30 +10,19 @@ html , body {
     height: 100%;
 }
 
-.main {
-    height: 100%;
+.header {
     display: flex;
-}
-
-.main-sidebar {
-    background-color: #59886b;
-    width: 350px;
-    padding: 50px;
-}
-
-.main-sidebar a {
+    justify-content: space-between;
+    background-color: #1d3557;
     color: #fff;
-    text-decoration: none;
+    align-items: center;
+    padding: 20px;
 }
 
-.main-sidebar p {
-    margin: 10px;
+.header li {
+    display: inline;
 }
 
-.main-sidebar li {
-    padding: 10px;
-}
-
-.main-content {
+.container {
     padding: 50px;
 }

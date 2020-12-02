@@ -8,17 +8,12 @@ html
         link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin="anonymous")
         link(rel="stylesheet", href="/css/dashboardStyle.css")
     body
-        .main
-            .main-sidebar
+        .header
+            .header-logo پنل کاربری
+            .header-menu
                 ul
-                    p مدیریت سفارشات
                     li
-                        a(href="/dashboard/orders")  مشاهده سفارشات
-                    li
-                        a(href="/dashboard/orders/create")  ثبت سفارش جدید
-                    p پشتیبانی
-                    li
-                        a(href="")  0912-888-12-02
+                        a.btn.btn-danger(href="/dashboard/orders/create")  ثبت سفارش جدید
 
-            .main-content
-                block content
+        .container
+            block content

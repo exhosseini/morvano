@@ -6,7 +6,7 @@ const Order = require('../models/Order')
 
 router.get('/',async (req,res) => {
     const findUser = await User.findById(req.session.user)
-    res.render('dashboard/showDashboard', { user : findUser})
+    res.redirect('/dashboard/orders')
 })
 
 router.get('/orders', async (req,res) => {
