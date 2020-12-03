@@ -5,9 +5,9 @@ block content
     form(method="POST", action="/dashboard/orders/create")
         .form-group
             label لینک محصول مورد نظر :
-            input.form-control(type="text", name="link_address")
+            input.form-control(type="text", name="link_address",required)
         .form-group
             label توضیحات :
-            textarea.form-control(name="description")
+            textarea.form-control(name="description",required)
         input.btn.btn-success(type="Submit", value="ثبت")
 

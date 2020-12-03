@@ -1,13 +1,26 @@
 extends layout
+
 block content
-    form(method='POST',action='/auth/register')
-        .form-group
-            label نام :
-            input.form-control(type='text',name='first_name')
-        .form-group
-            label نام خانوادگی :
-            input.form-control(type='text',name='last_name')
-        .form-group
-            label شماره همراه :
-            input.form-control(type='text',name='phone_number')
-        input.btn.btn-success.btn-block(type='Submit',value='ثبت نام')
+
+    if error
+        .alert.alert-danger کاربری با این مشخصات در سیستم ثبت میباشد از بخش ورود به پنل اقدام به ورود بفرمایید
+    .card
+        .card-header    ثبت نام
+        .card-body
+            form(action="/auth/register", method="post")
+                .form-group
+                    label نام :
+                    input.form-control(type="text", name="first_name", required)
+                .form-group
+                    label نام خانوادگی :
+                    input.form-control(type="text", name="last_name", required)
+                .form-group
+                    label شماره همراه :
+                    input.form-control(type="tel", name="phone_number", required)
+                .form-group
+                    label ایمیل :
+                    input.form-control(type="tel", name="email_address", required)
+                .form-group
+                    label  کلمه عبور :
+                    input.form-control(type="password", name="password", required)
+                input.btn.btn-success.btn-block(type="submit", value="ثبت نام")

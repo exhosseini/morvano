@@ -6,19 +6,6 @@
     font-family: Vazir;
 }
 
-html , body {
-    height: 100%;
-}
-.main {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #59886b;
-}
-
-.main-content {
+.container {
     padding: 50px;
-    background-color: #fff;
-    border-radius: 10px;
 }

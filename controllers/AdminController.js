@@ -4,7 +4,7 @@ const router = express.Router()
 const Order = require('../models/Order')
 
 router.get('/', (req,res) => {
-    res.render('admin/showAdminDashboard')
+    res.redirect('/admin/orders')
 })
 
 router.get('/orders', async (req,res) => {

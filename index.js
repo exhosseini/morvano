@@ -27,12 +27,13 @@ const AdminController = require('./controllers/AdminController')
 
 const isLogin = require('./middlewares/isLogin')
 const isAdmin = require('./middlewares/isAdmin')
+const isGuest = require('./middlewares/isGuest')
 
 app.get('/', (req,res) => {
     res.redirect('/dashboard')
 })
 
-app.use('/auth', AuthController)
+app.use('/auth', isGuest,AuthController)
 app.use('/dashboard',isLogin, DashboardController)
 app.use('/admin', isLogin, isAdmin, AdminController)
 

@@ -1,7 +1,23 @@
 extends layout
+
 block content
-    form(method='POST',action='/auth/login')
-        .form-group
-            label شماره همراه :
-            input.form-control(type='text',name='phone_number')
-        input.btn.btn-success.btn-block(type='Submit',value='ورود')
+    if error
+        .alert.alert-danger نام کاربری یا کلمه عبور اشتباه وارد شده است .
+    .card
+        .card-header    ورود به پنل کاربری
+        .card-body 
+            form(action="/auth/login", method="post")
+                .form-group
+                    label ایمیل :
+                    input.form-control(type="text", name="email_address", required)
+
+                .form-group
+                    label کلمه عبور :
+                    input.form-control(type="password", name="password", required)
+
+                input.btn.btn-success.btn-block(type="submit", value="ورود")
+
+                br
+
+                p عضو نیستید ؟ 
+                    a(href="/auth/register") ثبت نام کنید
