@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+    table.table
+        thead
+            tr
+                th نام
+                th نام خانوادگی
+                th تلفن
+                th مدیریت
+        tbody
+            each user in users
+                tr
+                    td= user.first_name
+                    td= user.last_name
+                    td= user.phone_number
