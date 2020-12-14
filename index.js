@@ -37,6 +37,6 @@ app.use('/auth', isGuest,AuthController)
 app.use('/dashboard',isLogin, DashboardController)
 app.use('/admin', isLogin, isAdmin, AdminController)
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log('Server running on port 3000')
 })
